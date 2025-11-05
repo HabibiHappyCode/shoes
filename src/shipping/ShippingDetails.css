@@ -1,0 +1,45 @@
+form {
+    width: 50%;
+    margin: 5em auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form h3 {
+    font-weight: 100;
+}
+
+form p {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #555555;
+    gap: 10px;
+}
+
+form p input,
+form p textarea {
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid hotpink;
+    outline: none;
+}
+
+form button {
+    width: 30%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: hotpink;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

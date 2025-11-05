@@ -1,0 +1,211 @@
+.cart-container {
+    width: 100%;
+    height: auto;
+    padding: 3em 7em;
+}
+
+.cart-container h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 400;
+    color: hotpink;
+}
+
+.noItem {
+    background-color: hotpink;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+    margin: 20px auto;
+    display: flex;
+    justify-self: center;
+}
+
+.cart-container .sub-total {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-container .sub-total a {
+    width: 25%;
+    padding: 10px;
+    background: hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.cart-container .sub-total a button {
+    width: 100%;
+    color: #fff;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cart-container .sub-total main {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.cart-container .sub-total main h3 {
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.cart-container .sub-total main big {
+    font-size: 17px;
+}
+
+.cart-container .sub-total button:hover {
+    background: rgba(255, 105, 180, .8);
+}
+
+@media (max-width: 650px) {
+    .cart-container .sub-total button {
+        width: 100%;
+    }
+
+    .cart-container .sub-total main {
+        width: 100%;
+    }
+}
+
+.cart-container .cart {
+    padding: 10px 0;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(255, 105, 180);
+}
+
+.cart-container .cart section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    height: auto;
+}
+
+.cart-container .cart section .item-img {
+    width: 20%;
+    height: 20vh;
+}
+
+.cart-container .cart section .item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-container .cart section main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart-container .cart section main h3 {
+    font-weight: 100;
+    /* font */
+}
+
+.cart-container .cart section main p {
+    font-size: 15px;
+}
+
+.cart-container .cart section main sub {
+    font-size: 11px;
+}
+
+.cart-container .cart section main sub span {
+    color: hotpink;
+}
+
+.cart-container .actions {
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid hotpink;
+    border-right: 1px solid hotpink;
+    border-radius: 2px;
+    padding: 0 9px;
+}
+
+.cart-container .actions button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: hotpink;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+
+.cart-container .actions button:hover {
+    scale: .8;
+}
+
+.cart-container .actions p {
+    padding: 10px 15px;
+    background: hotpink;
+    color: white;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+@media (max-width: 900px) {
+    .cart-container {
+        padding: 3em .5em;
+    }
+
+    .cart-container .cart section .item-img {
+        width: 40%;
+        height: 20vh;
+    }
+
+    .cart-container .cart section {
+        gap: 10px;
+    }
+
+    .cart-container .cart section main h3 {
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+    .cart-container .cart section main p {
+        font-size: 12px;
+    }
+
+    .cart-container .actions {
+        width: 15%;
+    }
+}
+
+@media (max-width: 550px) {
+    .cart-container .cart section {
+        gap: 10px;
+        width: 85%;
+    }
+
+    .cart-container .actions {
+        width: 30%;
+
+    }
+
+}

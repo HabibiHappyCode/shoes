@@ -66,7 +66,6 @@ function ProductsDetails() {
                     <img onClick={() => handleSetImage('1')} src={selectedItem.img[1]} alt="" />
                     <img onClick={() => handleSetImage('2')} src={selectedItem.img[2]} alt="" />
                     <img onClick={() => handleSetImage('3')} src={selectedItem.img[3]} alt="" />
-                    <img onClick={() => handleSetImage('4')} src={selectedItem.img[4]} alt="" />
                 </div>
             </div>
             <div className="details-items-container">

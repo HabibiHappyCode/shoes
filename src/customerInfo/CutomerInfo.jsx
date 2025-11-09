@@ -1,18 +1,31 @@
-import { Link } from 'react-router-dom'
+import { Link, redirect, useNavigate } from 'react-router-dom'
 import '../customerInfo/CustomerInfo.css'
 import { useContext } from 'react';
 import CartContext from '../context/CartContext';
 import { currencyFormatter } from '../Library/formatter';
+import useAuthStore from '../context/AuthContext';
 
 
 function CutomerInfo() {
+    const { isLoggedIn } = useAuthStore();
 
     const { items } = useContext(CartContext)
     const storedInputs = JSON.parse(localStorage.getItem('inputs'));
 
+    const navigate = useNavigate()
+
     const subTotal = items.reduce((totalNumber, item) => {
         return totalNumber + item.price * item.quantity
-    }, 0)
+    }, 0);
+
+    const handleCheckOutItems = () => {
+        if (isLoggedIn) {
+            return window.alert('Your order has been placed sucessfully')
+
+        } else {
+            return navigate('/login')
+        }
+    }
 
     return (
         <div className='customer-container'>
@@ -78,7 +91,7 @@ function CutomerInfo() {
 
             </div>
 
-            <button onClick={() => window.alert('your order has been placed')}>Order Now</button>
+            <button onClick={handleCheckOutItems}>Order Now</button>
         </div>
     )
 }

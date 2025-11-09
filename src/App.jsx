@@ -21,7 +21,7 @@ function App() {
       <CartContextProvider>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home />} loader />
           <Route path='/Products' element={<Products />} />
           <Route path='/Products/:productId' element={<ProductsDetails />} />
           <Route path='/login' element={<AuthLoginForm />} />

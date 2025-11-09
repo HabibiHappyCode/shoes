@@ -32,6 +32,7 @@
     height: 10vh;
     display: flex;
     gap: 10px;
+
 }
 
 .details-container .image-items-container .item-two img {
@@ -142,13 +143,13 @@
 
 @media (max-width: 1000px) {
     .details-container {
-        padding: 2em .5em;
+        padding: .5em;
     }
 }
 
 @media (max-width: 800px) {
     .details-container {
-        flex-wrap: wrap;
+        display: block;
     }
 
     .details-container .image-items-container {
@@ -159,8 +160,17 @@
         width: 100%;
     }
 
+    .details-container .image-items-container .item-one {
+    height: 45vh;
+}
+
     .details-container .image-items-container .item-two {
         gap: 5px;
-        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
     }
+
+    
 }

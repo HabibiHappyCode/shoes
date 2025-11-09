@@ -1,9 +1,14 @@
 
+import { useNavigate } from 'react-router-dom';
+import useAuthStore from '../context/AuthContext';
 import { currencyFormatter } from '../Library/formatter'
 import '../order_now/OrderNow.css'
 
 function OrderNow() {
     const orderStored = JSON.parse(localStorage.getItem('orderNowItem'));
+
+    const { isLoggedIn } = useAuthStore();
+    const navigate = useNavigate()
 
     const handleSubmitForm = (event) => {
         event.preventDefault()
@@ -18,7 +23,11 @@ function OrderNow() {
         }
         localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
 
-        window.alert('your order has been placed')
+        if (!isLoggedIn) {
+            return navigate('/login')
+        } else {
+            return window.alert('Your order has been placed successfully')
+        }
 
     }
     return (

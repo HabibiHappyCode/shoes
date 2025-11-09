@@ -151,3 +151,7 @@
 .sub span {
     color: hotpink;
 }
+
+.error {
+    color: red;
+}

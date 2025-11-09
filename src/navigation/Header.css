@@ -13,6 +13,11 @@ header {
     border-bottom: 1px solid white;
 }
 
+h2 a {
+    text-decoration: none;
+    color: white;
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -75,6 +80,17 @@ header nav .auth a button {
     border-radius: 100px;
     cursor: pointer;
     color: whitesmoke;
+}
+
+.logout {
+    background: white;
+    border: 1px solid white;
+    font-size: 15px;
+    margin: 5px;
+    padding: .5em .7em;
+    border-radius: 100px;
+    cursor: pointer;
+    color: hotpink;
 }
 
 header nav .auth a:nth-child(1) button {
